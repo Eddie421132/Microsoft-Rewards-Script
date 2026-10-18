@@ -43,6 +43,7 @@ fi
 
 CONFIG_FILE="$SCRIPT_DIR/config/config.json"
 CONFIG_EXAMPLE="$SCRIPT_DIR/config.example.json"
+mkdir -p "$SCRIPT_DIR/config" "$SCRIPT_DIR/sessions"
 
 if ! [ -f "$CONFIG_EXAMPLE" ]; then
   echo "ERROR: config.example.json not found at $CONFIG_EXAMPLE - image may be corrupt." >&2

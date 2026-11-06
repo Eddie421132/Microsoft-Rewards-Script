@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# 开启轻量 HTTP 端口监听（用于通过 Render 的 Web Service 存活健康检测）
+node -e "require('http').createServer((_, res) => res.end('Microsoft Rewards Script is Running')).listen(process.env.PORT || 10000, '0.0.0.0');" &
 set -euo pipefail
 
 # Ensure Playwright uses preinstalled browsers
